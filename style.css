@@ -48,6 +48,7 @@ header {
 header.scrolled {
   padding: 0.8rem 0;
   background: rgba(255, 255, 255, 0.8);
+  -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
 }
 
@@ -65,8 +66,8 @@ header.scrolled .nav-bar {
   align-items: center;
   padding: 0.8rem 2.5rem;
   background: var(--glass);
-  backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
   border-radius: 100px;
   border: 1px solid var(--glass-border);
   box-shadow: var(--shadow-sm);
@@ -509,7 +510,34 @@ header.scrolled .nav-bar {
   }
 
   .nav-links {
-    display: none; /* In a real app, add a mobile menu */
+    position: fixed;
+    right: -100%;
+    top: 0;
+    width: 60%;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.98);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s ease;
+    z-index: 1000;
+    box-shadow: -10px 0 30px rgba(0,0,0,0.1);
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .nav-links li {
+    margin: 1.5rem 0;
+  }
+
+  .nav-links a {
+    font-size: 1.3rem;
+    color: var(--primary);
   }
 
   .hero-btns {
@@ -538,17 +566,17 @@ header.scrolled .nav-bar {
 @keyframes kenBurns { 0% { transform: scale(1) translate(0, 0); } 100% { transform: scale(1.15) translate(-3%, -3%); } }
 
 .about-page, .cart-page { position: relative; z-index: 1; min-height: 100vh; padding: 150px 5% 100px; }
-.brand-story, .reviews, .cart-container { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(30px); -webkit-backdrop-filter: blur(30px); border-radius: 40px; border: 1px solid rgba(255,255,255,0.3); box-shadow: var(--shadow-lg); padding: 4rem; margin-bottom: 4rem; color: #111; }
+.brand-story, .reviews, .cart-container { background: rgba(255, 255, 255, 0.85); -webkit-backdrop-filter: blur(30px); backdrop-filter: blur(30px); border-radius: 40px; border: 1px solid rgba(255,255,255,0.3); box-shadow: var(--shadow-lg); padding: 4rem; margin-bottom: 4rem; color: #111; }
 .brand-story h2, .reviews h2, .cart-header h1 { color: var(--primary); margin-bottom: 2rem; font-weight: 800; font-size: 3rem; }
 .brand-story p, .review-card p, .cart-header p { color: #222; font-weight: 500; font-size: 1.15rem; line-height: 1.8; }
-.review-card { background: rgba(255,255,255,0.7); backdrop-filter: blur(10px); }
+.review-card { background: rgba(255,255,255,0.7); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); }
 
 /* ======= REFINED CART LAYOUT ======= */
 .cart-header { text-align: left; margin-bottom: 3rem; border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 2rem; }
 .cart-layout { display: grid; grid-template-columns: 1.5fr 1fr; gap: 4rem; align-items: start; }
 .cart-main { background: transparent; border-radius: 20px; }
 .cart-grid { display: flex; flex-direction: column; gap: 1rem; }
-.cart-item { display: grid; grid-template-columns: 120px 2fr 1fr auto; align-items: center; gap: 2rem; padding: 2rem; background: rgba(255,255,255,0.8); backdrop-filter: blur(10px); border-radius: 20px; transition: var(--transition); border: 1px solid rgba(255,255,255,0.2); }
+.cart-item { display: grid; grid-template-columns: 120px 2fr 1fr auto; align-items: center; gap: 2rem; padding: 2rem; background: rgba(255,255,255,0.8); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); border-radius: 20px; transition: var(--transition); border: 1px solid rgba(255,255,255,0.2); }
 .cart-item.removing { opacity: 0; transform: translateX(50px); pointer-events: none; }
 .cart-item img { width: 120px; height: 160px; object-fit: cover; border-radius: 12px; box-shadow: var(--shadow-sm); }
 .item-details h3 { font-size: 1.3rem; margin-bottom: 0.5rem; color: var(--primary); }
@@ -582,4 +610,20 @@ header.scrolled .nav-bar {
   .item-details { grid-area: details; }
   .item-price { grid-area: price; }
   .remove-btn { grid-area: delete; }
+}
+
+/* ======= MOBILE MENU TOGGLE ======= */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  color: var(--primary);
+  cursor: pointer;
+  z-index: 1001;
+  transition: var(--transition);
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
 }

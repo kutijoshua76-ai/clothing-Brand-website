@@ -162,6 +162,18 @@ document.addEventListener('DOMContentLoaded', () => {
   if (window.location.pathname.includes('cart.html')) {
     renderCart();
   }
+
+  // Mobile Menu Toggle
+  const mobileMenu = document.getElementById('mobile-menu');
+  const navLinks = document.querySelector('.nav-links');
+  
+  if (mobileMenu) {
+    mobileMenu.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      mobileMenu.querySelector('i').classList.toggle('uil-bars');
+      mobileMenu.querySelector('i').classList.toggle('uil-multiply');
+    });
+  }
 });
 
 // Navbar scroll effect

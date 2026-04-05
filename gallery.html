@@ -21,8 +21,11 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="gallery.html" class="active">Collection</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="cart.html" class="cart-link">Cart <span class="cart-count">0</span></a></li>
+        <li><a href="cart.html" class="cart-link" title="Your Cart">Cart <span class="cart-count">0</span></a></li>
       </ul>
+      <div class="menu-toggle" id="mobile-menu" title="Menu">
+        <i class="uil uil-bars"></i>
+      </div>
     </nav>
   </header>
 
@@ -42,7 +45,7 @@
           <h3>Urban Luxe Hoodie</h3>
           <div class="product-footer">
             <span class="price">$210.00</span>
-            <button class="add-to-cart" onclick="addToCart('Urban Luxe Hoodie', 210.00, 'images/urban Hoodie.jpeg')">
+            <button class="add-to-cart" aria-label="Add to Cart" title="Add to Cart" onclick="addToCart('Urban Luxe Hoodie', 210.00, 'images/urban Hoodie.jpeg')">
               <i class="uil uil-plus"></i>
             </button>
           </div>
@@ -54,7 +57,7 @@
           <h3>Heritage Denim Jacket</h3>
           <div class="product-footer">
             <span class="price">$335.00</span>
-            <button class="add-to-cart" onclick="addToCart('Heritage Denim Jacket', 335.00, 'images/Denim jackets.jpeg')">
+            <button class="add-to-cart" aria-label="Add to Cart" title="Add to Cart" onclick="addToCart('Heritage Denim Jacket', 335.00, 'images/Denim jackets.jpeg')">
               <i class="uil uil-plus"></i>
             </button>
           </div>
@@ -66,7 +69,7 @@
           <h3>Sculpted Palazo Jean</h3>
           <div class="product-footer">
             <span class="price">$245.00</span>
-            <button class="add-to-cart" onclick="addToCart('Sculpted Palazo Jean', 245.00, 'images/palazo jean.jpeg')">
+            <button class="add-to-cart" aria-label="Add to Cart" title="Add to Cart" onclick="addToCart('Sculpted Palazo Jean', 245.00, 'images/palazo jean.jpeg')">
               <i class="uil uil-plus"></i>
             </button>
           </div>
@@ -78,7 +81,7 @@
           <h3>Vintage White Organic Tee</h3>
           <div class="product-footer">
             <span class="price">$115.00</span>
-            <button class="add-to-cart" onclick="addToCart('Vintage White Organic Tee', 115.00, 'images/vintage white.jpeg')">
+            <button class="add-to-cart" aria-label="Add to Cart" title="Add to Cart" onclick="addToCart('Vintage White Organic Tee', 115.00, 'images/vintage white.jpeg')">
               <i class="uil uil-plus"></i>
             </button>
           </div>
@@ -90,7 +93,7 @@
           <h3>Forest Vintage Crew</h3>
           <div class="product-footer">
             <span class="price">$142.00</span>
-            <button class="add-to-cart" onclick="addToCart('Forest Vintage Crew', 142.00, 'images/vintage green.jpeg')">
+            <button class="add-to-cart" aria-label="Add to Cart" title="Add to Cart" onclick="addToCart('Forest Vintage Crew', 142.00, 'images/vintage green.jpeg')">
               <i class="uil uil-plus"></i>
             </button>
           </div>
@@ -102,7 +105,7 @@
           <h3>Signature Jump Wear</h3>
           <div class="product-footer">
             <span class="price">$420.00</span>
-            <button class="add-to-cart" onclick="addToCart('Signature Jump Wear', 420.00, 'images/jump wear.jpeg')">
+            <button class="add-to-cart" aria-label="Add to Cart" title="Add to Cart" onclick="addToCart('Signature Jump Wear', 420.00, 'images/jump wear.jpeg')">
               <i class="uil uil-plus"></i>
             </button>
           </div>
@@ -116,9 +119,9 @@
       <div class="footer-logo">TrendyThreads</div>
       <p>&copy; 2025 TrendyThreads. All rights reserved.</p>
       <div class="footer-social">
-        <a href="#"><i class="uil uil-instagram"></i></a>
-        <a href="#"><i class="uil uil-twitter"></i></a>
-        <a href="#"><i class="uil uil-facebook"></i></a>
+        <a href="#" aria-label="Instagram" title="Instagram"><i class="uil uil-instagram"></i></a>
+        <a href="#" aria-label="Twitter" title="Twitter"><i class="uil uil-twitter"></i></a>
+        <a href="#" aria-label="Facebook" title="Facebook"><i class="uil uil-facebook"></i></a>
       </div>
     </div>
   </footer>
