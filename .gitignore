@@ -1,0 +1,8 @@
+node_modules/
+.DS_Store
+dist/
+.env
+repo.zip
+archive.zip
+clothing-Brand-website-main/
+.vscode/

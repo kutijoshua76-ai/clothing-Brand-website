@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Cart | TrendyThreads Premium Fashion</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+</head>
+<body>
+  <div class="motion-bg-container">
+    <img src="images/cart_bg.png" alt="" class="motion-bg-image">
+    <div class="motion-bg-overlay"></div>
+  </div>
+  <header>
+    <nav class="nav-bar" aria-label="Main Navigation">
+      <div class="logo">
+        <img src="images/Trendy t logo.jpeg" alt="Trendy">
+        <h2>TrendyThreads</h2>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html">Collection</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="cart.html" class="active cart-link">Cart <span class="cart-count">0</span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="cart-page fade-in appear">
+    <div class="cart-container">
+      <div class="cart-header">
+        <h1>Your Shopping Cart</h1>
+        <p>Premium pieces selected for your unique style.</p>
+      </div>
+
+      <div class="cart-layout">
+        <div class="cart-main">
+          <div class="cart-grid">
+            <!-- Cart items will be rendered here by script.js -->
+            <div class="loading-msg">Loading your premium selections...</div>
+          </div>
+        </div>
+
+        <aside class="cart-summary">
+          <h2>Order Summary</h2>
+          <div class="summary-details">
+            <div class="summary-row">
+              <span>Subtotal</span>
+              <span id="subtotal">$0.00</span>
+            </div>
+            <div class="summary-row">
+              <span>Estimated Tax (8%)</span>
+              <span id="tax">$0.00</span>
+            </div>
+            <div class="summary-row">
+              <span>Shipping</span>
+              <span class="free-shipping">Complimentary</span>
+            </div>
+            <hr>
+            <div class="summary-row total-row">
+              <span>Total</span>
+              <span id="total">$0.00</span>
+            </div>
+          </div>
+          <button class="btn btn-primary checkout-btn" onclick="alert('Checkout integration coming soon!')">Secure Checkout</button>
+          <p class="crypto-msg"><i class="uil uil-shield-check"></i> Encrypted Secure Checkout</p>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="glass-footer">
+    <div class="footer-content">
+      <div class="footer-logo">TrendyThreads</div>
+      <p>&copy; 2025 TrendyThreads. All rights reserved.</p>
+      <div class="footer-social">
+        <a href="#"><i class="uil uil-instagram"></i></a>
+        <a href="#"><i class="uil uil-twitter"></i></a>
+        <a href="#"><i class="uil uil-facebook"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>

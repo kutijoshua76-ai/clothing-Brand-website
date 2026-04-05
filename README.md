@@ -1,0 +1,5 @@
+OBJECTIVE: the main purpose of developing this front end page is to display how our valuable customers can making orders online and effectively
+EFFECTIVENESS: the page show sharp effectiveness and it will always be updated when their are new products to add
+PAYMENT: the payment page will updated with more insights and with rapid internet speed.
+  These are the sole objective regarding this website.....
+  study carefully and explore..
